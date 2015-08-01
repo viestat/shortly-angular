@@ -7,8 +7,7 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function(){
     Links.addLink($scope.link)
       .then(function(op){
-        $location.path('/links');
-        console.log(op);
+        $location.path('/shorten');
        });
   };
 
