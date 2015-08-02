@@ -1,6 +1,13 @@
-<div id='container'>
+<div id='container' >
 <!-- Your code here -->
-
+<form ng-submit='addLink()'>
+      <input class='text' type='text' name='url' ng-model='link.url' required=''>
+      <div ng-show="form.url.$touched">
+            <span ng-show="form.url.$error.required">Enter a URL</span>
+            <!--TODO: check for invalid url <span ng-show="form.url.$error.email">This is not a valid email.</span> -->
+          </div>
+      <input type='submit' value='Shorten'>
+</form>
 </div>
 
 
